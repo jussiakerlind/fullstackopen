@@ -1,0 +1,12 @@
+table {
+    width: 120px;
+    border-collapse: collapse;
+}
+
+td:first-child { 
+    text-align: left;  
+}
+
+td:last-child { 
+    text-align: right; 
+}
