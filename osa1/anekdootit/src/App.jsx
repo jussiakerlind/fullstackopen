@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 const MostVotes = (props) => {
+  console.log(props)
   const { max, index } = props.voted.reduce((acc, num, i) => 
     num > acc.max ? { max: num, index: i } : acc, 
     { max: -Infinity, index: -1 }
@@ -44,7 +45,7 @@ const App = () => {
   
   const [selected, setSelected] = useState(0)
 
-  const [voted, setVoted] = useState(0)
+  const [voted, setVoted] = useState(new Uint8Array(8))
 
   const randomizeSelected = () => {
     const randomInteger = getRandomInteger(0, 8)
